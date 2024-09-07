@@ -58,7 +58,7 @@ The **RedBus-Test-Case-Automation-Tool** leverages a multimodal Language Learnin
   
 2. **Run the Application**
    ```bash
-   streamlit run app.py
+   streamlit run main.py
 ## Contributing
   Contributions are welcome! 
   Please fork the repository and submit a pull request with your proposed changes. For major changes, please open an issue to discuss them first.

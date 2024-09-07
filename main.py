@@ -27,130 +27,39 @@ if uploaded_files:
     # Prepare the prompt with multiple examples
     prompt = (
         '''
-               RedBus App Testing Scenarios
-Here are some detailed test cases for the RedBus mobile app:
+               You are a highly experienced software tester with a proven track record of creating comprehensive and effective test case formats. Your task is to generate detailed test cases for several key features of the RedBus mobile app. Below are the features for which you need to create test cases based on the provided screenshots:
 
-1. Source, Destination, and Date Selection
-Description:
-This test case verifies that the user can successfully search for available buses by entering the source city, destination city, and travel date.
+                1. **Source, Destination, and Date Selection**: The user chooses the origin, destination, and travel date.
+                2. **Bus Selection**: Display and select a bus from the available options.
+                3. **Seat Selection**: Allow the user to choose a seat on the selected bus.
+                4. **Pick-up and Drop-off Point Selection**: Choose where the journey starts and ends.
+                5. **Offers**: Highlight any discounts or promotions available.
+                6. **Filters**: Options for sorting buses by time, price, or other criteria.
+                7. **Bus Information**: Details about the bus, such as amenities, photos, and user reviews.
 
-Pre-conditions:
+                For each feature, generate a comprehensive test case that includes the following:
 
-The RedBus app is installed on the user's mobile device.
-The user has an active internet connection.
-Testing Steps:
+                    - **Description**: A brief summary of what the test case is about.
+                    - **Pre-conditions**: The necessary setup or conditions that need to be in place before testing.
+                    - **Testing Steps**: A detailed list of clear, step-by-step instructions to perform the test.
+                    - **Expected Result**: The outcome that should be observed if the feature works correctly.
 
-Launch the RedBus app.
-On the home screen, tap the "From" field and enter the source city (e.g., "Chatrapati Sambhajinagar").
-Select the correct source city from the suggestions that appear.
-Tap the "To" field and enter the destination city (e.g., "Mumbai").
-Select the correct destination city from the suggestions that appear.
-Tap the "Date of Journey" field and select the desired travel date from the calendar.
-Tap the "Search buses" button.
-Expected Result:
+                    Please use the screenshots provided to identify the necessary elements and steps for each test case. Ensure that each test case is clear, precise, and follows a structured format to be easily understood by a QA team. If any additional context is provided, incorporate that into the test cases as needed.
+                        Source, Destination, and Date Selection: The user chooses where they're going, where they’re starting, and when.
+                        
+                        Bus Selection: Display and choose from available buses.
 
-The app should display a list of available buses for the selected source city, destination city, and travel date.
-The list should include relevant bus details such as bus operator, departure and arrival times, available seats, and ticket price.
-2. Bus Selection
-Description:
-This test case verifies that the user can select a specific bus from the search results based on their preferences.
+                        Seat Selection: Let the user pick their seat on the selected bus.
+                        
+                        Pick-up and Drop-off Point Selection: Choose where the journey starts and ends.
+                        
+                        Offers: Highlight any discounts or promotions available.
+                        
+                        Filters: Options for sorting buses by time, price, or other criteria.
+                        Bus Information: Details about the bus, such as amenities, photos, and user reviews.
 
-Pre-conditions:
+                    Make sure to fill in each section with appropriate and relevant information for the specified features.
 
-The user has successfully searched for available buses (Test Case 1).
-Testing Steps:
-
-From the list of available buses, scroll through the options and tap on the desired bus that meets your criteria (time, price, rating, etc.).
-Expected Result:
-
-The app should display a detailed view of the selected bus, including all relevant information (amenities, seat availability, fare breakdown, boarding/dropping points, etc.).
-3. Seat Selection
-Description:
-This test case verifies that the user can select their desired seat(s) on the chosen bus.
-
-Pre-conditions:
-
-The user has selected a specific bus (Test Case 2).
-Testing Steps:
-
-On the bus details screen, tap on the "View Seats" or similar button.
-A seat map of the bus will be displayed.
-Tap on the desired seat(s) to select them. Selected seats will be highlighted.
-If needed, choose the seat type (sleeper/seater) and berth preference (upper/lower).
-Expected Result:
-
-The selected seats should be marked on the seat map.
-The total fare should update accordingly based on the chosen seat type and number of seats.
-4. Pick-up and Drop-off Point Selection
-Description:
-This test case ensures the user can select their preferred boarding and dropping points for the journey.
-
-Pre-conditions:
-
-The user has selected a bus and seat(s) (Test Case 3).
-Testing Steps:
-
-Proceed to the booking page.
-On the booking page, you should see options to select boarding and dropping points.
-Tap on each option to view available locations.
-Select your desired pick-up and drop-off points from the list.
-Expected Result:
-
-The selected boarding and dropping points should be reflected on the booking summary.
-The app may display any additional charges related to specific pick-up/drop-off points.
-5. Offers
-Description:
-This test case verifies that available discounts and promotions are correctly applied during booking.
-
-Pre-conditions:
-
-The user has reached the payment stage of booking.
-Testing Steps:
-
-On the payment page, look for a section titled "Offers," "Promo Codes," or similar.
-If there are applicable offers, tap on "View all" or an equivalent option.
-Select the offer you want to use. You might need to enter a promo code.
-Expected Result:
-
-The discount should be applied to the final ticket price.
-The booking summary should clearly show the original price, applied discount, and the final payable amount.
-6. Filters
-Description:
-This test case verifies the functionality of filters in sorting and refining bus search results.
-
-Pre-conditions:
-
-The user has performed a bus search (Test Case 1).
-Testing Steps:
-
-On the bus list page, locate the "Filters" or "Sort" option (usually represented by icons or a drop-down menu).
-Experiment with different filters:
-Bus Type: Select specific bus types (e.g., AC, Non-AC, Sleeper, Seater).
-Price: Set a price range to filter buses within your budget.
-Departure/Arrival Time: Choose preferred departure or arrival time slots.
-Bus Operator: Select your preferred bus operator from the list.
-Expected Result:
-
-The app should dynamically update the displayed bus list based on the applied filters.
-The filtered results should only display buses that match the selected criteria.
-7. Bus Information
-Description:
-This test case verifies that detailed information about the bus is readily available to the user.
-
-Pre-conditions:
-
-The user has selected a specific bus (Test Case 2).
-Testing Steps:
-
-Scroll through the bus details screen to view information about:
-Amenities: Check if the bus has features like AC, charging points, blankets, water bottles, etc.
-Photos: Look for images of the bus interior and exterior.
-User Reviews: Read reviews and ratings from previous passengers.
-Bus Operator Information: View details about the bus operator's reliability and services.
-Expected Result:
-
-The app should display accurate and detailed information about the selected bus, aiding the user in making an informed decision.
-Photos should be clear and relevant, and user reviews should be genuine and insightful.
 
         '''
         )

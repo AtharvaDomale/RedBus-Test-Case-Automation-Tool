@@ -3,7 +3,7 @@ from PIL import Image
 import google.generativeai as genai
 
 # Configure the API key for Gemini
-genai.configure(api_key="API_KEY")  # Replace "API_KEY" with your actual API key or use environment variables
+genai.configure(api_key="PASTE_HERE_YOUR_API_KEY")  # Replace "API_KEY" with your actual API key or use environment variables
 
 # Define the model
 model = genai.GenerativeModel("gemini-1.5-pro")
@@ -60,7 +60,6 @@ if uploaded_files:
 
                     Make sure to fill in each section with appropriate and relevant information for the specified features.
 
-
         '''
         )
     
@@ -69,7 +68,7 @@ if uploaded_files:
 
     # Button to generate the content
     if st.button('Describe Testing Instructions'):
-        with st.spinner('Generating the Content...'):
+        with st.spinner('Generating The Test Cases ...'):
             try:
                 # Convert image list to the format required by the model
                 image_inputs = [img for img in image_list]  # Directly use PIL images
